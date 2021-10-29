@@ -4,7 +4,11 @@ public class PizzaClass {
     private int slices = 0;
     private String size = "";
 
-
+    public PizzaClass (String toppings, int slices, String size){
+        this.toppings = toppings;
+        this.slices = slices;
+        this.size = size;
+    }
 
     // Methods
     public String setTopping(String top){
@@ -30,5 +34,13 @@ public class PizzaClass {
     }
     public String getSize() {
         return size;
+    }
+    public void getOrder(){
+        System.out.println("Your order is on the way!");
+        System.out.println("Here are the details of your order: ");
+        System.out.println();
+        System.out.println("Size: " + getSize());
+        System.out.println("Topping: " + getToppings());
+        System.out.println("Slices: " + getSlices());
     }
 }
